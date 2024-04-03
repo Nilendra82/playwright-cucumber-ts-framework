@@ -10,8 +10,6 @@
 6. Page object model
 
 ## Sample report
-![image](https://github.com/ortoniKC/Playwright_Cucumber_TS/assets/58769833/da2d9f5a-85e7-4695-8ce2-3378b692afc4)
-
 
 ## Project structure
 
