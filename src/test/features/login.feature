@@ -1,4 +1,4 @@
-Feature: User Authentication tests
+Feature: Swag Labs Tests
 
   Background:
     Given I navigate to app
