@@ -10,6 +10,7 @@
 6. Page object model
 
 ## Sample report
+![image](https://github.com/Nilendra82/playwright-cucumber-ts-framework/blob/e53d9779263c2a3f48712df30e4e37271719f3f6/report.png)
 
 ## Project structure
 
