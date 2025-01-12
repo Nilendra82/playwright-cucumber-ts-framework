@@ -3,13 +3,14 @@
 ## Features
 
 1. Awesome report with screenshots, videos & logs
-2. Execute tests on multiple environments 
+2. Execute tests on multiple environments
 3. Parallel execution
 4. Rerun only failed features
 5. Retry failed tests on CI
 6. Page object model
 
 ## Sample report
+
 ![image](https://github.com/Nilendra82/playwright-cucumber-ts-framework/blob/e53d9779263c2a3f48712df30e4e37271719f3f6/report.png)
 
 ## Project structure
@@ -35,21 +36,25 @@
 3. `npm install` to install all the dependencies
 4. `npx playwright install` to install the browsers
 5. `npm run test` to execute the tests
-6. To run a particular test change the following code in "cucumber.js" file 
+6. To run a particular test change the following code in "cucumber.js" file
+
 ```
   paths: [
             "src/test/features/featurename.feature"
-         ] 
+         ]
 ```
+
 7. Use tags to run a specific or collection of specs
+
 ```
 npm run test --TAGS="@test or @add"
 ```
 
 ### Folder structure
+
 0. `src\pages` -> Write all logics in the page (UI screen)
-1. `src\test\features` -> Add your all feature file here
-2. `src\test\steps` -> Add your all step definitions here
+1. `src\tests\features` -> Add your all feature file here
+2. `src\tests\steps` -> Add your all step definitions here
 3. `src\hooks\hooks.ts` -> Browser setup and teardown logic
 4. `src\hooks\pageFixture.ts` -> PageFixture is used to share the page objects to step definitions
 5. `src\helper\env` -> To handle Multiple environments
