@@ -51,7 +51,7 @@
 
 ```
   paths: [
-            "src/test/features/featurename.feature"
+            "src/tests/features/featurename.feature"
          ]
 ```
 
