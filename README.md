@@ -1,5 +1,12 @@
 # Playwright with TS and BDD
 
+# Warning:
+
+1.  Don't upgrade cucumber-multiple-html-reporter > 3.3.0
+2.  When you clone the project and after doing npm install if still Cucumber report is not showing feature icon then execute the following command from terminal:
+    i. npm uninstall multiple-cucumber-html-reporter --save-dev
+    ii. npm install multiple-cucumber-html-reporter@3.3.0 --save-dev
+
 ## Features
 
 1. Awesome report with screenshots, videos & logs
@@ -36,6 +43,10 @@
 3. `npm install` to install all the dependencies
 4. `npx playwright install` to install the browsers
 5. `npm run test` to execute the tests
+   `npm run test:smoke` to execute the smoke tests only
+   `npm run test:firefox:headless` to execute the tests headless on firefox
+   `npm run test:failed` to execute only failed tests
+   `npm run generate:report` to generate the tests report
 6. To run a particular test change the following code in "cucumber.js" file
 
 ```
@@ -47,7 +58,7 @@
 7. Use tags to run a specific or collection of specs
 
 ```
-npm run test --TAGS="@test or @add"
+npm run test --TAGS="@tag"
 ```
 
 ### Folder structure
@@ -60,6 +71,6 @@ npm run test --TAGS="@test or @add"
 5. `src\helper\env` -> To handle Multiple environments
 6. `src\helper\types` -> To get environment code suggestions
 7. `src\helper\report` -> To generate the report
-8. `config/cucumber.js` -> One file to do everything
+8. `configs/cucumber.js` -> One file to do everything
 9. `package.json` -> Dependencies repository
-10. `src\helper\util` -> Read test data from json & logger
+10. `src\helper\utils` -> Read test data from json & logger
