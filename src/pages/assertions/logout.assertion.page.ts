@@ -11,7 +11,7 @@ export default class LogoutAssertionPage {
   async verifyLogoutPage() {
     try {
       const url = this.page.url();
-      expect(url).toEqual("https://www.saucedemo.comgdf/"); // This will throw an error if the condition is not met
+      expect(url).toEqual("https://www.saucedemo.com/"); // This will throw an error if the condition is not met
       fixture.logger.info("User is logged out successfully");
     } catch (error) {
       fixture.logger.error(
