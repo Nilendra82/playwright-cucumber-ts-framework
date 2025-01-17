@@ -1,3 +1,4 @@
+@e2e
 Feature: Swag Labs Tests
 
   Background:
@@ -15,7 +16,7 @@ Feature: Swag Labs Tests
   Scenario: Add to cart check
     When I login as "standard_user" and "secret_sauce"
     Then I should see Add to cart button is visible
-    
+  @smoke 
   Scenario: Logout
     When I login as "standard_user" and "secret_sauce"
     And I logout

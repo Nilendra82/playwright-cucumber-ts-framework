@@ -6,11 +6,11 @@
   "scripts": {
     "debug": "cross-env ENV=dev PWDEBUG=1 DEBUG=pw:api cucumber-js --config=configs/cucumber.js",
     "pretest": "npx ts-node src/helper/report/init.ts",
-    "test": "cross-env ENV=dev FORCE_COLOR=0 cucumber-js --config=configs/cucumber.js || true",
+    "test": "cross-env ENV=dev FORCE_COLOR=0 cucumber-js --config=configs/cucumber.js || exit 0 && npm run posttest",
     "test:smoke": "cross-env ENV=dev FORCE_COLOR=0 cucumber-js --config=configs/cucumber.js --tags '@smoke' || true",
     "test:firefox:headless": "cross-env ENV=dev BROWSER=firefox HEADLESS=true FORCE_COLOR=0 cucumber-js --config=configs/cucumber.js || true",
-    "generate:report": "npx ts-node src/helper/report/report.ts",
-    "test:failed": "cross-env ENV=dev DEBUG=cucumber-js:* cucumber-js --require-module ts-node/register --require src/tests/steps/**/*.ts --require src/hooks/hooks.ts @rerun.txt"
+    "test:failed": "cross-env ENV=dev DEBUG=cucumber-js:* cucumber-js --require-module ts-node/register --require src/tests/steps/**/*.ts --require src/hooks/hooks.ts @rerun.txt",
+    "posttest": "npx ts-node src/helper/report/report.ts"
   },
   "keywords": [
     "cucumber",

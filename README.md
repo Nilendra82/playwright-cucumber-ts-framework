@@ -46,7 +46,7 @@
    `npm run test:smoke` to execute the smoke tests only
    `npm run test:firefox:headless` to execute the tests headless on firefox
    `npm run test:failed` to execute only failed tests
-   `npm run generate:report` to generate the tests report
+   `npm run posttest` to generate the tests report
 6. To run a particular test change the following code in "cucumber.js" file
 
 ```

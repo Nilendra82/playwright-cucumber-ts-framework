@@ -5,6 +5,7 @@ import { invokeBrowser } from "../helper/browsers/browser.manager";
 import { getEnv } from "../helper/env/env";
 import { createLogger } from "winston";
 import { options } from "../helper/utils/logger";
+import { exec } from "child_process";
 const fs = require("fs-extra");
 
 let browser: Browser;
